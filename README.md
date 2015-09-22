@@ -20,6 +20,11 @@ Learning Programming
 
 # Ruby
 
+## Data Structure
+### 陣列
++ array.rb
+二維陣列的宣告以及使用方式，並且使用迭代器列出陣列內容。
+
 ##  Basic Knowledge
 ### 函數呼叫成功，回傳Nil
 + verify_boolean.rb
