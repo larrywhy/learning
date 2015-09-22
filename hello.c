@@ -3,8 +3,7 @@
 
 int main()
 {
-    printf("hello ds");
-    
-    system("pause");
+    printf("hello ds!");
+
     return 0;
 }

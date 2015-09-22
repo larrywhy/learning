@@ -7,7 +7,6 @@ int main()
     int ary1[MAX] = {6,9,12,55,77,88};
     printf("%d",binSearch(ary1,55,1,6));
     
-    system("pause");
     return 0;
 }
 //
