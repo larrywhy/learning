@@ -10,3 +10,7 @@ for testing and learning temporary.
 ## 函數呼叫成功，回傳True
 ###verify_boolean.c
 如果函數呼叫成功，則會回傳True
+
+## 字串處理 atoi
+###atoi.c
+將字串中出現的數字轉為integer型態。
