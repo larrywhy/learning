@@ -20,10 +20,18 @@ Learning Programming
 
 # Ruby
 
+[Ruby 學習筆記](https://hackpad.com/Ruby--TCOYbywzQJN)
+
 ## Data Structure
-### 陣列
+### 陣列 Array
 + array.rb
 二維陣列的宣告以及使用方式，並且使用迭代器列出陣列內容。
+
+### 雜湊 Hash
++ histogram.rb 
+雜湊表的應用，使用者輸入自串，以空白隔開。並且利用雜湊表儲存分割後的字串以及統計。
+ + 利用.sort_by 做排序。
+ + 利用.reverse! 做反轉。
 
 ##  Basic Knowledge
 ### 函數呼叫成功，回傳Nil
