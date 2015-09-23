@@ -17,6 +17,11 @@ Learning Programming
 + atoi.c
 將字串中出現的數字轉為integer型態。
 
+## Math
+### 質數 
++ prime.c 
+判斷一個數字是否為質數。可以注意此程式有使用條件編譯，利用條件編譯可以方便除錯及測試用途。
+
 
 # Ruby
 
