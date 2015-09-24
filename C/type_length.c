@@ -52,6 +52,5 @@ int main()
     int double_array_len = (int) double_array_size / double_arrdress_size; 
     printf("The length of array is %d\n",double_array_len);
 #endif
-    system("pause");
     return 0;
 }
