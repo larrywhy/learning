@@ -47,6 +47,11 @@ Learning Programming
  + 利用.sort_by 做排序。
  + 利用.reverse! 做反轉。
 
++ select.rb:
+使用.select方法，可以給定搜尋條件(似SQL)來做特定功能。此程式有兩種寫法，給定搜尋條件並且存入另一個Hash變數之中。
+ + 利用**.each**方法加上條件搜尋並且一個一個存入Hash。
+ + 利用**.select**方法直接將過濾結果存入一個Hash。
+
 ##  基本觀念 Basic Knowledge
 ### 函數呼叫成功，回傳Nil
 + verify_boolean.rb:
