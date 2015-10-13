@@ -66,3 +66,8 @@ Learning Programming
 ### Splat arguments 把计肚患
 + method.rb:
 ㄏノ splat 把计肚患よΑㄓ笷把计肚methodㄤいョΤ㏕﹚把计肚把计(⊿Τ)
+
+## proc ン
+### code block 莱ノ
++ proc.rb:
+ノproc盢code block跑计㊣proc跑计絛ㄒΤ.collectの.mapよ猭ㄏノ
