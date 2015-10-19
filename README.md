@@ -71,3 +71,8 @@ Learning Programming
 ### code block 應用
 + proc.rb:
 利用proc將code block存入一個變數，並且呼叫proc變數。此範例可以看到有.collect以及.map方法的使用。
+
+## 物件導向 Object-Oriented
+### override 
++ override.rb :
+一個簡單的繼承、並且帶有初始化練習以及override的應用。
