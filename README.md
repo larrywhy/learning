@@ -31,6 +31,9 @@ Learning Programming
 
   內容包含: int 型態、double 型態、char 型態陣列。(即string)
 
+### 指標
++ ptr.c:
+練習指標應用，注意該內容裡有sizeof()可以看到配置記憶體大小。以及整數指標可以指向字元指標。
 
 # Ruby
 
