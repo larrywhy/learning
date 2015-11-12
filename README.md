@@ -34,6 +34,8 @@ Learning Programming
 ### 指標
 + ptr.c:
 練習指標應用，注意該內容裡有sizeof()可以看到配置記憶體大小。以及整數指標可以指向字元指標。
++ swap.c:
+pass by value應用，將兩數值交換。因為pass by value，傳遞到副函式時，需要傳遞指標變數。針對記憶體內容做數值交換。
 
 # Ruby
 
