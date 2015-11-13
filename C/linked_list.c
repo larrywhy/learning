@@ -11,6 +11,7 @@ int isNULL(struct cont *);
 struct cont * addNode(struct cont *, int);/* add tail node */
 struct cont * deleteNode(struct cont *);/* delete tail node */
 struct cont * generateNode(int);
+struct cont * invertNode(struct cont *);
 void showNode(struct cont *);
 int showNodeNum(struct cont *);
 
@@ -33,12 +34,19 @@ int main()
 
     //showNode(list);
     list = addNode(list,5);    /* first node */
-    showNode(list);
-    list = deleteNode(list);
-    showNode(list);
-    printf("list number is %d\n",showNodeNum(list));
+    //showNode(list);
+    //list = deleteNode(list);
+    //showNode(list);
+    //printf("list number is %d\n",showNodeNum(list));
 
+    list = addNode(list,4);    /* first node */
+    list = addNode(list,9);    /* first node */
+    list = addNode(list,52);    /* first node */
     
+    
+    list = invertNode(list);
+    showNode(list);
+
     system("pause");
     return 0;
 }
@@ -106,6 +114,32 @@ struct cont * generateNode(int newNum){
     return newNode;
 }
 
+struct cont * invertNode(struct cont * list){
+    if(list == NULL){
+        printf("List is NULL\n");
+        return NULL;
+    }
+    else{
+        struct cont * tmp;
+        struct cont * invertList;
+        invertList = NULL;
+        tmp = list;
+        
+        if(list->next == NULL){
+            return list;
+        }
+        else{
+            /* tmp always follow origin list */
+            while(list != NULL){
+                list = list->next;
+                tmp->next = invertList;
+                invertList = tmp;
+                tmp = list;
+            }
+        }
+        return invertList;
+    }
+}
 
 int showNodeNum(struct cont * list){
     int count = 0;
