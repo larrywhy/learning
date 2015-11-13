@@ -8,7 +8,8 @@ struct cont{
 };
 
 int isNULL(struct cont *);
-int addNode(struct cont *, int);/* add tail node */
+struct cont * addNode(struct cont *, int);/* add tail node */
+struct cont * deleteNode(struct cont *);/* delete tail node */
 struct cont * generateNode(int);
 void showNode(struct cont *);
 int showNodeNum(struct cont *);
@@ -16,35 +17,27 @@ int showNodeNum(struct cont *);
 
 int main()
 {
-    struct cont * head = NULL;
+    //struct cont * head = NULL;
     struct cont * list = NULL;
     
 #ifdef DEBUG     
     struct cont * node = NULL;
-    isNULL(node);
-    
+    isNULL(node);    
     /* allocate memory to node */
-    node = (struct cont *)malloc(sizeof(struct cont));
-    
+    node = (struct cont *)malloc(sizeof(struct cont));    
     isNULL(node);
     /* assign value to node */
     node->num = 3;    
-    printf("%d\n",node->num);
-        
+    printf("%d\n",node->num);        
 #endif
-    
-    list = (struct cont *)malloc(sizeof(struct cont));
-    head = list; /* node_head point to list's head node */
-    //list->num = 1;/* initialize */
-    //list->next = NULL; /* create first node, the next node must point to NULL */
-    list = generateNode(0);    /* first node */
-    addNode(list,3);
-    addNode(list,5);
-    
-    //isNULL(list);    
+
+    //showNode(list);
+    list = addNode(list,5);    /* first node */
     showNode(list);
-    printf("number of list node is:%d\n",showNodeNum(list));
-    
+    list = deleteNode(list);
+    showNode(list);
+    printf("list number is %d\n",showNodeNum(list));
+
     
     system("pause");
     return 0;
@@ -63,29 +56,56 @@ int isNULL(struct cont * testNode)
     }
 }
 
-int addNode(struct cont * list, int newNum)
+struct cont * addNode(struct cont * list, int newNum)
 {
+    /* if first node  is NULL.*/
     if(isNULL(list)){
-        // addNum fail , return 0
-        return 0;
+        
+        return generateNode(newNum);
     }
     else{
+        struct cont * head = list; 
         // visit to end note
         while(list->next != NULL){
             list = list->next;
         }
         list->next = generateNode(newNum);
-        return 1;
+        return head;
     }
 }
 
-struct cont * generateNode(int newNum)
-{
+struct cont * deleteNode(struct cont * dlist){
+    if(isNULL(dlist)){
+        printf("this list is NULL , can not delete anymore!\n");
+        return NULL;
+    }
+    else{     
+        /* delete only one node */      
+        if(dlist->next == NULL){
+            free(dlist);
+            return NULL;
+        }
+        else{
+            struct cont * preNode; /* keep the last second node */
+            struct cont * headNode = dlist;/* keep head list */               
+            while(dlist->next != NULL){
+                preNode = dlist;
+                dlist = dlist->next;
+            }
+            preNode->next = NULL;
+            free(dlist);
+            return headNode;
+        }        
+    }
+}
+
+struct cont * generateNode(int newNum){
     struct cont * newNode = (struct cont *)malloc(sizeof(struct cont));
     newNode->num = newNum;
     newNode->next = NULL;    
     return newNode;
 }
+
 
 int showNodeNum(struct cont * list){
     int count = 0;
