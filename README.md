@@ -1,83 +1,83 @@
 Learning Programming
 ========
 # C
+ 
+## 資料結構 Data Structure
+### 二元搜尋法(遞迴)
+ + binSearch.c:
+注意，在index使用上，必須為1開始。否則在整數除法上會出現錯誤。
 
-## ¸ê®Æµ²ºc Data Structure
-### ¤G¤¸·j´Mªk(»¼°j)
-+ binSearch.c:
-ª`·N¡A¦bindex¨Ï¥Î¤W¡A¥²¶·¬°1¶}©l¡C§_«h¦b¾ã¼Æ°£ªk¤W·|¥X²{¿ù»~¡C
-	
-## °ò¥»Æ[©À Basic Knowledge
-### ¨ç¼Æ©I¥s¦¨¥\¡A¦^¶ÇTrue
+## 基本觀念 Basic Knowledge
+### 函數呼叫成功，回傳True
 + verify_boolean.c:
-¦pªG¨ç¼Æ©I¥s¦¨¥\¡A«h·|¦^¶ÇTrue
+-如果函數呼叫成功，則會回傳True
+ 
+## 字串處理 String
+### 字串處理 atoi
+ + atoi.c:
+將字串中出現的數字轉為integer型態。
 
-## ¦r¦ê³B²z String
-### ¦r¦ê³B²z atoi
-+ atoi.c:
-±N¦r¦ê¤¤¥X²{ªº¼Æ¦rÂà¬°integer«¬ºA¡C
+## 數學 Math
+### 質數 
+ + prime.c 
+判斷一個數字是否為質數。可以注意此程式有使用條件編譯，利用條件編譯可以方便除錯及測試用途。
+ 
+## 指標、記憶體 memory 
+### 計算動態配置陣列長度
+ + type_length.c:
+配置一個int陣列未宣告陣列大小，利用指標計算出陣列長度。**注意!**這程式有使用條件編譯，欲切換請修改#if 使之為1。 
+    - 利用指標是指向陣列的第一個位址(在函數傳遞陣列參數也是一樣)，可以得知宣告型態的記憶體大小，接著總長度除以宣告型態大小就可以得知陣列個數。
+ 
+   - 內容包含: int 型態、double 型態、char 型態陣列。(即string)
+ 
+### 指標
 
-## ¼Æ¾Ç Math
-### ½è¼Æ 
-+ prime.c 
-§PÂ_¤@­Ó¼Æ¦r¬O§_¬°½è¼Æ¡C¥i¥Hª`·N¦¹µ{¦¡¦³¨Ï¥Î±ø¥ó½sÄ¶¡A§Q¥Î±ø¥ó½sÄ¶¥i¥H¤è«K°£¿ù¤Î´ú¸Õ¥Î³~¡C
-
-## «ü¼Ð¡B°O¾ÐÅé memory 
-### ­pºâ°ÊºA°t¸m°}¦Cªø«×
-+ type_length.c:
-°t¸m¤@­Óint°}¦C¥¼«Å§i°}¦C¤j¤p¡A§Q¥Î«ü¼Ð­pºâ¥X°}¦Cªø«×¡C**ª`·N!**³oµ{¦¡¦³¨Ï¥Î±ø¥ó½sÄ¶¡A±ý¤Á´«½Ð­×§ï#if ¨Ï¤§¬°1¡C
-
-  §Q¥Î«ü¼Ð¬O«ü¦V°}¦Cªº²Ä¤@­Ó¦ì§}(¦b¨ç¼Æ¶Ç»¼°}¦C°Ñ¼Æ¤]¬O¤@¼Ë)¡A¥i¥H±oª¾«Å§i«¬ºAªº°O¾ÐÅé¤j¤p¡A±µµÛÁ`ªø«×°£¥H«Å§i«¬ºA¤j¤p´N¥i¥H±oª¾°}¦C­Ó¼Æ¡C
-
-  ¤º®e¥]§t: int «¬ºA¡Bdouble «¬ºA¡Bchar «¬ºA°}¦C¡C(§Ystring)
-
-### «ü¼Ð
-+ ptr.c:
-½m²ß«ü¼ÐÀ³¥Î¡Aª`·N¸Ó¤º®e¸Ì¦³sizeof()¥i¥H¬Ý¨ì°t¸m°O¾ÐÅé¤j¤p¡C¥H¤Î¾ã¼Æ«ü¼Ð¥i¥H«ü¦V¦r¤¸«ü¼Ð¡C
-+ swap.c:
-pass by valueÀ³¥Î¡A±N¨â¼Æ­È¥æ´«¡C¦]¬°pass by value¡A¶Ç»¼¨ì°Æ¨ç¦¡®É¡A»Ý­n¶Ç»¼«ü¼ÐÅÜ¼Æ¡C°w¹ï°O¾ÐÅé¤º®e°µ¼Æ­È¥æ´«¡C
-
-# Ruby 
-
-[Ruby ¾Ç²ßµ§°O](https://hackpad.com/Ruby--TCOYbywzQJN)
-
-## ¸ê®Æµ²ºc Data Structure
-### °}¦C Array
-+ array.rb:
-¤Gºû°}¦Cªº«Å§i¥H¤Î¨Ï¥Î¤è¦¡¡A¨Ã¥B¨Ï¥Î­¡¥N¾¹¦C¥X°}¦C¤º®e¡C
-
-### Âø´ê Hash
-+ histogram.rb:
-Âø´êªíªºÀ³¥Î¡A¨Ï¥ÎªÌ¿é¤J¦Û¦ê¡A¥HªÅ¥Õ¹j¶}¡C¨Ã¥B§Q¥ÎÂø´êªíÀx¦s¤À³Î«áªº¦r¦ê¥H¤Î²Î­p¡C
- + §Q¥Î.sort_by °µ±Æ§Ç¡C
- + §Q¥Î.reverse! °µ¤ÏÂà¡C
-
-+ select.rb:
-¨Ï¥Î.select¤èªk¡A¥i¥Hµ¹©w·j´M±ø¥ó(¦üSQL)¨Ó°µ¯S©w¥\¯à¡C¦¹µ{¦¡¦³¨âºØ¼gªk¡Aµ¹©w·j´M±ø¥ó¨Ã¥B¦s¤J¥t¤@­ÓHashÅÜ¼Æ¤§¤¤¡C
- + §Q¥Î**.each**¤èªk¥[¤W±ø¥ó·j´M¨Ã¥B¤@­Ó¤@­Ó¦s¤JHash¡C
- + §Q¥Î**.select**¤èªkª½±µ±N¹LÂoµ²ªG¦s¤J¤@­ÓHash¡C
-
-##  °ò¥»Æ[©À Basic Knowledge
-### ¨ç¼Æ©I¥s¦¨¥\¡A¦^¶ÇNil
-+ verify_boolean.rb:
-¦pªG¨ç¼Æ©I¥s¦¨¥\¡A«h·|¦^¶ÇNil
-
-## ¦r¦ê³B²z String
-### ¬O§_¥]§t¤l¦r¦ê¡B¨ú¥N¤l¦r¦ê
-+ substring.rb:
-·j´M¤l¦r¦ê¬O§_¦b¦r¦ê¤§¤¤¡A¨Ã¥B¨ú¥N¥L¡C 
-
-## ¤èªk Method
-### Splat arguments ¦h°Ñ¼Æ¶Ç»¼
-+ method.rb:
-¨Ï¥Î splat °Ñ¼Æ¶Ç»¼¤è¦¡¨Ó¹F¨ì¦h°Ñ¼Æ¶Ç¤Jmethod¡C¨ä¤¤¥ç¦³¥ý©T©w¤@­Ó°Ñ¼Æ¡A¦A¶Ç¤J¦h°Ñ¼Æ(¨S¦³¤W­­)¡C
-
-## proc ª«¥ó
-### code block À³¥Î
-+ proc.rb:
-§Q¥Îproc±Ncode block¦s¤J¤@­ÓÅÜ¼Æ¡A¨Ã¥B©I¥sprocÅÜ¼Æ¡C¦¹½d¨Ò¥i¥H¬Ý¨ì¦³.collect¥H¤Î.map¤èªkªº¨Ï¥Î¡C
-
-## ª«¥ó¾É¦V Object-Oriented
+ + ptr.c:
+練習指標應用，注意該內容裡有sizeof()可以看到配置記憶體大小。以及整數指標可以指向字元指標。
+ + swap.c:
+pass by value應用，將兩數值交換。因為pass by value，傳遞到副函式時，需要傳遞指標變數。針對記憶體內容做數值交換。
+ 
+# Ruby
+ 
+[Ruby 學習筆記](https://hackpad.com/Ruby--TCOYbywzQJN)
+ 
+## 資料結構 Data Structure
+### 陣列 Array
+ + array.rb:
+二維陣列的宣告以及使用方式，並且使用迭代器列出陣列內容。
+ 
+### 雜湊 Hash
+ + histogram.rb:
+雜湊表的應用，使用者輸入自串，以空白隔開。並且利用雜湊表儲存分割後的字串以及統計。
+    + 利用.sort_by 做排序。
+    + 利用.reverse! 做反轉。
+ 
+ + select.rb:
+使用.select方法，可以給定搜尋條件(似SQL)來做特定功能。此程式有兩種寫法，給定搜尋條件並且存入另一個Hash變數之中。
+    + 利用**.each**方法加上條件搜尋並且一個一個存入Hash。
+    + 利用**.select**方法直接將過濾結果存入一個Hash。
+ 
+##  基本觀念 Basic Knowledge
+### 函數呼叫成功，回傳Nil
+ + verify_boolean.rb:
+如果函數呼叫成功，則會回傳Nil
+ 
+## 字串處理 String
+### 是否包含子字串、取代子字串
+ + substring.rb:
+搜尋子字串是否在字串之中，並且取代他。 
+ 
+## 方法 Method
+### Splat arguments 多參數傳遞
+ + method.rb:
+使用 splat 參數傳遞方式來達到多參數傳入method。其中亦有先固定一個參數，再傳入多參數(沒有上限)。
+ 
+## proc 物件
+### code block 應用
+ + proc.rb:
+利用proc將code block存入一個變數，並且呼叫proc變數。此範例可以看到有.collect以及.map方法的使用。
+ 
+## 物件導向 Object-Oriented
 ### override 
-+ override.rb :
-¤@­ÓÂ²³æªºÄ~©Ó¡B¨Ã¥B±a¦³ªì©l¤Æ½m²ß¥H¤ÎoverrideªºÀ³¥Î¡C
+ + override.rb :
+一個簡單的繼承、並且帶有初始化練習以及override的應用。
