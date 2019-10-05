@@ -1,4 +1,4 @@
 import requests
 
-res = requests.get('http://pala.tw/js-example/')
+res = requests.get('http://www.google.com/')
 print(res.text)
